@@ -28,4 +28,5 @@ fs.readdirSync(model_path).forEach((file) => {
         import(urldata);
     }
 })
-app.listen(3000, () => console.log('listening on port 3000'));
+var port_number = app.listen(process.env.PORT || 3000);
+app.listen(port_number, () => console.log('listening on port 3000'));
